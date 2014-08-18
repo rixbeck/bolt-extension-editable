@@ -1,0 +1,6 @@
+/vendor/
+*.gitignore~
+.settings
+.project
+/composer.phar
+/.buildpath
