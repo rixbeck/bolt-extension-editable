@@ -15,7 +15,13 @@
 			"Editable" : [ "", "src" ]
 		}
 	},
-	"name" : "bolt/bolt-extension-editable",
+	"authors": [
+		{
+			"name": "Rix Beck",
+			"email": "rix@neologik.hu"
+		}
+	],
+	"name" : "rixbeck/bolt-extension-editable",
 	"type" : "bolt-extension",
 	"license" : "MIT",
 	"description" : "In-place editor for content editing on frontend",
