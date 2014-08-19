@@ -1,5 +1,5 @@
-Ed-It In Place Editor extension
-===============================
+Editable In Place Editor extension for Bolt CMS
+===============================================
 
 This extension extends administation functionality of Bolt on Frontend with enabling in-place editing some content.
 
