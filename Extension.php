@@ -20,6 +20,9 @@ class Extension extends ExtensionHelper
 
         if ($this->authorized) {
             $config = $this->config;
+            if (empty($config)) {
+                throw new \Exception('Something wrong with accessing configuration in extension ' . $this->getName());
+            }
             $this->controller = $this->createController($config['editor']);
             $this->controller->initialize($this->app);
 

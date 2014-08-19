@@ -14,20 +14,10 @@ class Ckeditor extends EditorController
      */
     public function initialize(Application $app)
     {
-        $weblib = 'view/lib';
-        $webbase = ((BOLT_COMPOSER_INSTALLED) ? '/bolt-public/' : $app['paths']['app']) . $weblib;
-        $filebase = BOLT_WEB_DIR . ((BOLT_COMPOSER_INSTALLED) ? '/bolt-public/' : $app['paths']['app']) . $weblib;
-        $this->extension->addResourcePath($filebase, $webbase);
-
-
-         // Fallback to view/js for eg. jquery-ui if necessary
-
-        /*
-         * $webjs = 'view/js';
-         * $webbase = ((BOLT_COMPOSER_INSTALLED) ? '/bolt-public/' : '/') . $webjs;
-         * $filebase = BOLT_WEB_DIR . ((BOLT_COMPOSER_INSTALLED) ? '/bolt-public/' : '/') . $webjs;
-         * $this->extension->addResourcePath($filebase, $webbase);
-         */
+        /** @var \Bolt\Configuration\ResourceManager $resmanager */
+        $resmanager = $app['resources'];
+        $weblib = '/view/lib';
+        $this->extension->addResourcePath($resmanager->getPath('app') . $weblib, $resmanager->getUrl('app') . $weblib);
     }
 
     /**

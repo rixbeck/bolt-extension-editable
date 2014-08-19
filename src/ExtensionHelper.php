@@ -13,6 +13,8 @@ abstract class ExtensionHelper extends BaseExtension
 
     protected $config;
 
+    protected $baseUrl;
+
     /**
      * (non-PHPdoc)
      *
@@ -20,8 +22,9 @@ abstract class ExtensionHelper extends BaseExtension
      */
     public function initialize()
     {
+        $this->baseUrl = substr($this->basepath, strlen($this->app['paths']['rootpath']));
         $this->resourcePaths = array(
-            $this->basepath . '/assets' => __DIR__ . '/assets',
+            $this->basepath . '/assets' => $this->baseUrl . '/assets/',
             $this->app['paths']['themepath'] => $this->app['paths']['theme']
         );
 
