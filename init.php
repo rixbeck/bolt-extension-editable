@@ -1,4 +1,4 @@
 <?php
-use Editable\Extension;
+use Bolt\Extension\Editable\Extension;
 
 $app['extensions']->register(new Extension($app));

@@ -1,5 +1,5 @@
 <?php
-namespace Editable;
+namespace Bolt\Extension\Editable;
 
 use Bolt\BaseExtension;
 use Composer\Autoload\ClassLoader;
