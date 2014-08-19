@@ -12,7 +12,7 @@
 	"autoload" : {
 	    "files": [ "init.php" ],
 		"psr-4" : {
-			"Editable" : [ "", "src" ]
+			"Editable\\" : [ "", "src" ]
 		}
 	},
 	"authors": [
