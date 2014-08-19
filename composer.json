@@ -27,5 +27,10 @@
 	"description" : "In-place editor for content editing on frontend",
 	"require" : {
 		"php" : ">=5.3"
+	},
+	"extra": {
+		"branch-alias": {
+		"dev-master": "1.0.*"
+		}
 	}
 }
