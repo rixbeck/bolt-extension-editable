@@ -4,7 +4,6 @@ namespace Bolt\Extension\Editable;
 use Silex\Application;
 use Symfony\Component\HttpFoundation\Request;
 use Bolt\Content;
-use Editable\Extension;
 
 /**
  * Class for Editor specific functions.
