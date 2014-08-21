@@ -9,7 +9,8 @@
 		"UI"
 	],
 	"require" : {
-		"php" : ">=5.3"
+		"php" : ">=5.3",
+		"bolt/bolt" : ">=2.0.0,<3.0.0"
 	},
 	"autoload" : {
 		"files" : [
