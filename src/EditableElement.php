@@ -1,5 +1,5 @@
 <?php
-namespace Bolt\Extension\Editable;
+namespace Bolt\Extension\Bolt\Editable;
 
 use Silex\Application;
 
@@ -50,7 +50,7 @@ class EditableElement
         $user = $this->app['users']->getCurrentUser();
 
         if ($content['ownerid'] != $user['id']) {
-            if (! $this->app['users']->isAllowed("contenttype:$contenttype:change-ownership:{$this->id}")) {
+            if (! $this->app['users']->isAllowed("contenttype:{$content['slug']}:change-ownership:{$this->id}")) {
                 return false;
             }
         }

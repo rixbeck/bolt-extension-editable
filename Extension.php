@@ -1,5 +1,5 @@
 <?php
-namespace Bolt\Extension\Editable;
+namespace Bolt\Extension\Bolt\Editable;
 
 use Silex\Application;
 use Symfony\Component\HttpFoundation\Request;

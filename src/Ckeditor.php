@@ -1,16 +1,16 @@
 <?php
-namespace Bolt\Extension\Editable;
+namespace Bolt\Extension\Bolt\Editable;
 
 use Silex\Application;
 use Symfony\Component\HttpFoundation\Request;
 use Bolt\Content;
 
-class Ckeditor extends EditorController
+class Ckeditor extends AbstractEditor
 {
 
     /**
      *
-     * @see EditorController::initialize()
+     * @see AbstractEditor::initialize()
      */
     public function initialize(Application $app)
     {
@@ -22,7 +22,7 @@ class Ckeditor extends EditorController
 
     /**
      *
-     * @see EditorController::save();
+     * @see AbstractEditor::save();
      */
     public function save(Application $app, Request $request)
     {
@@ -45,7 +45,7 @@ class Ckeditor extends EditorController
 
     /**
      *
-     * @see EditorController::getHtml();
+     * @see AbstractEditor::getHtml();
      */
     public function getHtml(EditableElement $element, Content $record, array $options = null)
     {

@@ -1,5 +1,5 @@
 <?php
-namespace Bolt\Extension\Editable;
+namespace Bolt\Extension\Bolt\Editable;
 
 use Silex\Application;
 use Symfony\Component\HttpFoundation\Request;
@@ -13,7 +13,7 @@ use Bolt\Content;
  * @author Rix
  *
  */
-abstract class EditorController
+abstract class AbstractEditor
 {
 
     protected $extension;

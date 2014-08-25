@@ -1,6 +1,5 @@
 {
-    "name" : "bolt/editable",
-
+	"name" : "bolt/editable",
 	"keywords" : [
 		"content editing",
 		"wyswyg",
@@ -16,7 +15,7 @@
 			"init.php"
 		],
 		"psr-4" : {
-			"Bolt\\Extension\\Editable\\" : [
+			"Bolt\\Extension\\Bolt\\Editable\\" : [
 				"",
 				"src"
 			]

@@ -1,16 +1,18 @@
 <?php
-namespace Bolt\Extension\Editable;
+namespace Bolt\Extension\Bolt\Editable;
 
 use Silex\Application;
 use Symfony\Component\HttpFoundation\Request;
 use Bolt\Content;
 
-class Raptor extends EditorController
+class Raptor extends AbstractEditor
 {
 
     /**
      *
-     * @see EditorController::save()
+     * @param Application $app
+     * @param Request $request
+     * @return Ambigous <number, boolean>
      */
     public function save(Application $app, Request $request)
     {
