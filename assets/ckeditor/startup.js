@@ -95,12 +95,16 @@
             editor.config.toolbar = tbItems;
         });
 
-        editor.on('instanceReady', function() {
-            var target = JSON.parse($element.attr('data-parameters'));
-            $element.attr('title', MSG_EDITABLE + $element.attr('title') + '.\n'
-                                  + MSG_CONTENTINFO + target.contenttypeslug
-                                  + '@' + target.fieldname);
-        });
+        var parameters = $element.attr('data-parameters');
+        if (parameters) {
+            editor.on('instanceReady', function() {
+                var target = JSON.parse(parameters);
+                $element.attr('title', MSG_EDITABLE + $element.attr('title')
+                                       + '.\n' + MSG_CONTENTINFO
+                                       + target.contenttypeslug + '@'
+                                       + target.fieldname);
+            });
+        }
 
     });
     /*
