@@ -4,3 +4,4 @@
 .project
 /composer.phar
 /.buildpath
+*.lock
