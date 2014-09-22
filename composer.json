@@ -11,14 +11,6 @@
 		"php" : ">=5.3",
 		"bolt/bolt" : ">=2.0.0,<3.0.0"
 	},
-	"require-dev" : {
-		"rixbeck/bolt-tasks" : "dev-master"
-	},
-	"repositories" : [{
-			"type" : "vcs",
-			"url" : "https://github.com/rixbeck/bolt-tasks.git"
-		}
-	],
 	"autoload" : {
 		"files" : [
 			"init.php"
@@ -45,7 +37,7 @@
 	"description" : "In-place editor for content editing on frontend",
 	"extra" : {
         "branch-alias" : {
-        "dev-master" : "2.0.*-dev"
+            "dev-master" : "2.0.*-dev"
         }
     }
 }
