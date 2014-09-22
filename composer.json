@@ -45,7 +45,7 @@
 	"description" : "In-place editor for content editing on frontend",
 	"extra" : {
 		"branch-alias" : {
-			"dev-master" : "2.0.1"
+			"dev-master" : "2.0.1-dev"
 		}
 	}
 }
