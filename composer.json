@@ -1,5 +1,7 @@
 {
 	"name" : "bolt/editable",
+	"description" : "In-place editor for content editing on frontend",
+	"type" : "bolt-extension",
 	"keywords" : [
 		"content editing",
 		"wyswyg",
@@ -7,6 +9,7 @@
 		"inplace editor",
 		"UI"
 	],
+	"license" : "MIT",
 	"require" : {
 		"php" : ">=5.3",
 		"bolt/bolt" : ">=2.0.0,<3.0.0"
@@ -32,20 +35,12 @@
 	},
 	"authors" : [{
 			"name" : "Rix Beck",
-			"email" : "rix@neologik.hu",
-			"homepage" : "https://github.com/rixbeck/bolt-extension-editable"
+			"email" : "rix@neologik.hu"
 		}
 	],
-	"support" : {
-		"issues" : "http://github.com/bolt/bolt/issues",
-		"email" : "support@bolt.neologik.hu"
-	},
-	"type" : "bolt-extension",
-	"license" : "MIT",
-	"description" : "In-place editor for content editing on frontend",
 	"extra" : {
-        "branch-alias" : {
-            "dev-master" : "2.0.*-dev"
-        }
-    }
+		"branch-alias" : {
+			"dev-master" : "2.0.*-dev"
+		}
+	}
 }
