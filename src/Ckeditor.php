@@ -18,6 +18,7 @@ class Ckeditor extends AbstractEditor
         $resmanager = $app['resources'];
         $weblib = '/view/lib';
         $this->extension->addResourcePath($resmanager->getPath('app') . $weblib, $resmanager->getUrl('app') . $weblib);
+        $this->extension->addResourcePath($resmanager->getPath('web') . '/bolt-public' . $weblib, $resmanager->getUrl('app') . $weblib);
     }
 
     /**

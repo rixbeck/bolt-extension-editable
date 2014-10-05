@@ -67,7 +67,7 @@
         items: ['Table']
     }];
 
-    CKEDITOR.plugins.addExternal('editable', '../../../extensions/Editable/assets/ckeditor/plugins/editable/', 'plugin.js');
+    CKEDITOR.plugins.addExternal('editable', '/extensions/vendor/bolt/editable/assets/ckeditor/plugins/editable/', 'plugin.js');
     CKEDITOR.config.extraPlugins = 'editable';
     CKEDITOR.config.autoParagraph = false;
 
