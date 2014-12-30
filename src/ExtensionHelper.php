@@ -24,7 +24,7 @@ abstract class ExtensionHelper extends BaseExtension
     {
         $this->baseUrl = substr($this->basepath, strlen($this->app['paths']['rootpath']));
         $this->resourcePaths = array(
-            $this->basepath . '/assets' => $this->baseUrl . '/assets/',
+            $this->basepath . '/assets' => '/' . $this->baseUrl . '/assets/',
             $this->app['paths']['themepath'] => $this->app['paths']['theme']
         );
 
@@ -110,12 +110,12 @@ abstract class ExtensionHelper extends BaseExtension
      *            Before </BODY> if true
      * @return boolean Resource successfully added or not
      */
-    protected function addAsset($type, $filename, $late = false)
+    protected function addAsset($type, $filename, $late = false, $priority = 0)
     {
         $addResource = 'add' . $type;
         foreach ($this->resourcePaths as $abspath => $relpath) {
             if (file_exists($abspath . '/' . $filename)) {
-                $this->app['extensions']->$addResource($relpath . '/' . $filename, $late);
+                $this->app['extensions']->$addResource($relpath . '/' . $filename, $late, $priority);
                 return true;
             }
         }
@@ -128,9 +128,9 @@ abstract class ExtensionHelper extends BaseExtension
      *
      * @see \Bolt\BaseExtension::addJavascript()
      */
-    public function addJavascript($filename, $late = false)
+    public function addJavascript($filename, $late = false, $priority = 0)
     {
-        return $this->addAsset('Javascript', $filename, $late);
+        return $this->addAsset('Javascript', $filename, $late, $priority);
     }
 
     /**

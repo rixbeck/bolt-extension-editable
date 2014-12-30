@@ -67,46 +67,48 @@
         items: ['Table']
     }];
 
-    CKEDITOR.plugins.addExternal('editable', '/extensions/vendor/bolt/editable/assets/ckeditor/plugins/editable/', 'plugin.js');
-    CKEDITOR.config.extraPlugins = 'editable';
-    CKEDITOR.config.autoParagraph = false;
+    if (CKEDITOR) {
+        CKEDITOR.plugins.addExternal('editable', '/extensions/vendor/bolt/editable/assets/ckeditor/plugins/editable/', 'plugin.js');
+        CKEDITOR.config.extraPlugins = 'editable';
+        CKEDITOR.config.autoParagraph = false;
 
-    $(document).ready(function() {
-        $('body').append('<div id="ext-editable-popup" style="display:none"/>');
-    });
-
-    CKEDITOR.on('instanceCreated', function(event) {
-        var editor = event.editor;
-        var $element = $(editor.element.$);
-        var options = $element.data('options') || [];
-        var tbItems = toolbar;
-
-        if (typeof options == "string") {
-            options = options.split(',');
-        }
-        for (var i = 0; i < options.length; i++) {
-            var menuItem = extras[options[i]];
-            if (typeof menuItem == "object") {
-                tbItems = tbItems.concat(menuItem);
-            }
-        }
-
-        editor.on('configLoaded', function() {
-            editor.config.toolbar = tbItems;
+        $(document).ready(function() {
+            $('body').append('<div id="ext-editable-popup" style="display:none"/>');
         });
 
-        var parameters = $element.attr('data-parameters');
-        if (parameters) {
-            editor.on('instanceReady', function() {
-                var target = JSON.parse(parameters);
-                $element.attr('title', MSG_EDITABLE + $element.attr('title')
-                                       + '.\n' + MSG_CONTENTINFO
-                                       + target.contenttypeslug + '@'
-                                       + target.fieldname);
-            });
-        }
+        CKEDITOR.on('instanceCreated', function(event) {
+            var editor = event.editor;
+            var $element = $(editor.element.$);
+            var options = $element.data('options') || [];
+            var tbItems = toolbar;
 
-    });
+            if (typeof options == "string") {
+                options = options.split(',');
+            }
+            for (var i = 0; i < options.length; i++) {
+                var menuItem = extras[options[i]];
+                if (typeof menuItem == "object") {
+                    tbItems = tbItems.concat(menuItem);
+                }
+            }
+
+            editor.on('configLoaded', function() {
+                editor.config.toolbar = tbItems;
+            });
+
+            var parameters = $element.attr('data-parameters');
+            if (parameters) {
+                editor.on('instanceReady', function() {
+                    var target = JSON.parse(parameters);
+                    $element.attr('title', MSG_EDITABLE + $element.attr('title')
+                                           + '.\n' + MSG_CONTENTINFO
+                                           + target.contenttypeslug + '@'
+                                           + target.fieldname);
+                });
+            }
+
+        });
+    }
     /*
      * @todo Implement snapshot capturing of a block and following changes
      */

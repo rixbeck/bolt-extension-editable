@@ -50,7 +50,7 @@ class Extension extends ExtensionHelper
         $editor = $name . '.js';
 
         $this->addJquery();
-        $this->addJavascript("{$name}/{$editor}", true);
+        $this->addJavascript("{$name}/{$editor}", false);
 
         foreach ($styles as $item) {
             $this->addCSS("{$item}.css");
