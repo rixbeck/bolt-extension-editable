@@ -57,7 +57,7 @@ class Extension extends ExtensionHelper
         }
 
         foreach ($scripts as $item) {
-            $this->addJavascript("{$item}.js", true);
+            $this->addJavascript("{$item}.js", true, 100);
         }
     }
 
