@@ -43,11 +43,11 @@
 			"dev-master" : "2.0.*-dev"
 		},
         "bolt-screenshots": [
-            "editable-001.jpg",
-            "editable-002.jpg",
-            "editable-003.jpg",
-            "editable-004.jpg",
-            "editable-005.jpg"
+            "editable-0.png"
+            "editable-1.png",
+            "editable-2.png",
+            "editable-3.png",
+            "editable-4.png"
         ]
 	}
 }
