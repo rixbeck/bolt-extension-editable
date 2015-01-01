@@ -54,7 +54,7 @@ you may set the `teaser` field of a record to editable with the following twig c
 ``{{ editable('teaser', record) }}``
 
 `record` can be any content object available either implicitly or explicitly.
-If optional `record` parameter omitted default record from the template context will be selected.
+If optional `record` parameter can be omitted by default then record from the template context will be selected.
 
 If the actual visitor has logged in and has corresponding permissions to change then can edit the content.
 Moving the mouse over the editable area of the page an `Edit` button will float over that should raise the editor toolbar.
