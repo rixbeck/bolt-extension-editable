@@ -15,9 +15,9 @@
             name: 'subsuper',
             items: ['Subscript', 'Superscript']
         },
-        mediaembed: {
+        embed: {
             name: 'embed',
-            items: ['MediaEmbed']
+            items: ['oembed']
         },
         align: {
             name: 'align',

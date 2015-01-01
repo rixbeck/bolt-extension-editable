@@ -120,3 +120,6 @@ Release Notes
 
 * 08-18-2014
 ** Moving to Bolt v2.0
+
+* 12-31-2014
+** Bugs with Bolt final
