@@ -77,7 +77,7 @@ These are the optional toolbar elements:
 * anchor: Link, Unlink, Anchor
 * links: Link, Unlink
 * subsuper: Subscript, Superscript
-* mediaembed: MediaEmbed
+* embed: MediaEmbed
 * align: JustifyLeft, JustifyCenter, JustifyRight, JustifyBlock
 * colors: TextColor, BGColor
 * tools: SpecialChar, RemoveFormat, Maximize, Source
