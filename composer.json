@@ -41,6 +41,13 @@
 	"extra" : {
 		"branch-alias" : {
 			"dev-master" : "2.0.*-dev"
-		}
+		},
+        "bolt-screenshots": [
+            "editable-001.jpg",
+            "editable-002.jpg",
+            "editable-003.jpg",
+            "editable-004.jpg",
+            "editable-005.jpg"
+        ]
 	}
 }
