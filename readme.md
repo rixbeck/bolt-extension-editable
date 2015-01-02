@@ -123,3 +123,7 @@ Release Notes
 
 * 12-31-2014
 ** Bugs with Bolt final
+
+* 01-02-2014
+** https://github.com/rixbeck/bolt-extension-editable/issues/4
+

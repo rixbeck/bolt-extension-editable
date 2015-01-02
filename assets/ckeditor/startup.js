@@ -71,6 +71,7 @@
         CKEDITOR.plugins.addExternal('editable', '/extensions/vendor/bolt/editable/assets/ckeditor/plugins/editable/', 'plugin.js');
         CKEDITOR.config.extraPlugins = 'editable';
         CKEDITOR.config.autoParagraph = false;
+        CKEDITOR.config.allowedContent = 'p i(*); strong em strike cite blockquote code ul ol li dl dt dd br h2 h3 h4 h5 h6;a[!href,title];img[!src,width,height,alt,title]{width,height,text-align,float};table thead tbody tr th td[*]{*}(*)';
 
         $(document).ready(function() {
             $('body').append('<div id="ext-editable-popup" style="display:none"/>');
