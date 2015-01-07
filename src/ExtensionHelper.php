@@ -138,7 +138,7 @@ abstract class ExtensionHelper extends BaseExtension
      *
      * @see \Bolt\BaseExtension::addCSS()
      */
-    public function addCSS($filename, $late = false)
+    public function addCSS($filename, $late = false, $priority = 0)
     {
         return $this->addAsset('CSS', $filename, $late);
     }
