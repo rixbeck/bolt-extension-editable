@@ -4,6 +4,7 @@ namespace Bolt\Extension\Bolt\Editable;
 use Silex\Application;
 use Symfony\Component\HttpFoundation\Request;
 use Bolt\Content;
+use Eloquent\Pathogen\FileSystem\FileSystemPath;
 
 class Ckeditor extends AbstractEditor
 {
@@ -17,8 +18,8 @@ class Ckeditor extends AbstractEditor
         /** @var \Bolt\Configuration\ResourceManager $resmanager */
         $resmanager = $app['resources'];
         $weblib = '/view/lib';
-        $this->extension->addResourcePath($resmanager->getPath('app') . $weblib, $resmanager->getUrl('app') . $weblib);
-        $this->extension->addResourcePath($resmanager->getPath('web') . '/bolt-public' . $weblib, $resmanager->getUrl('app') . $weblib);
+        $this->extension->addResourcePath($resmanager->getPath('app') . $weblib, (string) FileSystemPath::fromString($resmanager->getUrl('app') . $weblib)->normalize());
+        $this->extension->addResourcePath($resmanager->getPath('web') . '/bolt-public' . $weblib, (string) FileSystemPath::fromString($resmanager->getUrl('app') . $weblib)->normalize());
     }
 
     /**
