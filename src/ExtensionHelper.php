@@ -3,6 +3,7 @@ namespace Bolt\Extension\Bolt\Editable;
 
 use Bolt\BaseExtension;
 use Composer\Autoload\ClassLoader;
+use Eloquent\Pathogen\FileSystem\FileSystemPath;
 
 abstract class ExtensionHelper extends BaseExtension
 {
@@ -24,8 +25,8 @@ abstract class ExtensionHelper extends BaseExtension
     {
         $this->baseUrl = substr($this->basepath, strlen($this->app['paths']['rootpath']));
         $this->resourcePaths = array(
-            $this->basepath . '/assets' => '/' . $this->baseUrl . '/assets/',
-            $this->app['paths']['themepath'] => $this->app['paths']['theme']
+            $this->basepath . '/assets' => (string) FileSystemPath::fromString('/' . $this->baseUrl . '/assets/')->normalize(),
+            $this->app['paths']['themepath'] => (string) FileSystemPath::fromString($this->app['paths']['theme'])->normalize()
         );
 
         $this->preparePermissions();
