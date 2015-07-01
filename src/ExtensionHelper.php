@@ -12,7 +12,7 @@ abstract class ExtensionHelper extends BaseExtension
 
     protected $resourcePaths;
 
-    protected $config;
+    public $config;
 
     protected $baseUrl;
 
