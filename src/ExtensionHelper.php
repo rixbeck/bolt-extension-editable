@@ -116,7 +116,7 @@ abstract class ExtensionHelper extends BaseExtension
         $addResource = 'add' . $type;
         foreach ($this->resourcePaths as $abspath => $relpath) {
             if (file_exists($abspath . '/' . $filename)) {
-                $this->app['extensions']->$addResource($relpath . '/' . $filename, $late, $priority);
+                $this->app['extensions']->$addResource(str_replace("//","/",$relpath) . '/' . $filename, $late, $priority);
                 return true;
             }
         }
